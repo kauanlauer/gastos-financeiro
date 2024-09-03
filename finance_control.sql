@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02/09/2024 às 22:06
+-- Tempo de geração: 03/09/2024 às 22:22
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -76,7 +76,8 @@ CREATE TABLE `followers` (
 INSERT INTO `followers` (`id`, `follower_id`, `followed_id`) VALUES
 (8, 1, 3),
 (9, 1, 2),
-(10, 1, 4);
+(10, 1, 4),
+(11, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -214,7 +215,33 @@ INSERT INTO `group_messages` (`id`, `group_id`, `user_id`, `message`, `created_a
 (74, 5, 1, 'teste', '2024-09-02 19:26:31'),
 (75, 5, 1, 'tesss', '2024-09-02 19:26:46'),
 (76, 5, 1, 'aaa', '2024-09-02 19:27:43'),
-(77, 5, 1, 'oi', '2024-09-02 19:27:52');
+(77, 5, 1, 'oi', '2024-09-02 19:27:52'),
+(78, 5, 1, 'teste', '2024-09-03 12:54:38'),
+(79, 5, 1, 'teste', '2024-09-03 12:55:57'),
+(80, 5, 1, 'Oi', '2024-09-03 12:56:15'),
+(81, 5, 1, 'teste', '2024-09-03 13:09:26'),
+(82, 5, 1, 'teste', '2024-09-03 13:09:31'),
+(83, 5, 1, 'a', '2024-09-03 13:09:38'),
+(84, 5, 1, 'a', '2024-09-03 13:09:46'),
+(85, 5, 1, 'a', '2024-09-03 13:09:51'),
+(86, 5, 1, 'teste', '2024-09-03 13:09:54'),
+(87, 5, 1, 'a', '2024-09-03 13:09:57'),
+(88, 5, 1, 'oi', '2024-09-03 13:12:43'),
+(89, 5, 1, 'Olaa', '2024-09-03 13:13:15'),
+(90, 5, 1, 'pppppppp', '2024-09-03 13:13:24'),
+(91, 5, 1, 'A', '2024-09-03 13:13:29'),
+(92, 5, 1, 'a', '2024-09-03 13:30:13'),
+(93, 5, 1, 'Teste', '2024-09-03 13:31:32'),
+(94, 5, 1, 'aaaa', '2024-09-03 13:33:57'),
+(95, 5, 1, 'ppooopiop', '2024-09-03 13:34:09'),
+(96, 5, 1, 'oooo', '2024-09-03 13:34:26'),
+(97, 5, 1, 'klkkkkkkk', '2024-09-03 13:34:32'),
+(98, 5, 1, 'a', '2024-09-03 13:40:24'),
+(99, 5, 1, 'a', '2024-09-03 13:40:27'),
+(100, 5, 1, 'kkkkkkkkkkk', '2024-09-03 13:40:31'),
+(101, 5, 1, 'Aaaabrbieiebbdex', '2024-09-03 13:40:44'),
+(102, 5, 1, 'a', '2024-09-03 13:58:02'),
+(103, 5, 1, 'teste', '2024-09-03 16:35:45');
 
 -- --------------------------------------------------------
 
@@ -310,21 +337,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `profile_picture`, `biography`, `gender`, `birth_date`, `birthdate`) VALUES
 (1, 'Kauan Lauer', 'erickkauanlauer@gmail.com', '$2y$10$m/Kaw3PM9LvmJBCnY0.cjeycF/M/So0B5SSTnXcGctWgzhY6xO552', 'uploads/eu.jpg', 'Criador do Site de controle de gastos', 'Masculino', NULL, '1998-08-24'),
-(2, 'Erick Kauan', 'kauan@gmail.com', '$2y$10$63Pa0yxtjv.XhFesUS8ztuX5VLvGmukZF9xIr9Bdn7XtlXmINa0v6', 'uploads/user.jpg', 'Usuario de teste tmb', 'Masculino', NULL, '1998-05-01'),
-(3, 'Joao Pedro', 'joao@gmail.com', '$2y$10$PF73dumfRFzSUepq3Bjpmu5ctRkG.pKHUDCi1jFUBM8x9vuaFKAz2', 'uploads/E8X2s6rXIAUiVib.jpg', 'Usuario teste', 'Masculino', NULL, '1998-08-24'),
-(4, 'Thiago Viana', 'thiago@gmail.com', '$2y$10$xMaYz4sTN3mr4OQ2pxluLOQ2W.a04L6.hCqI4rpAPC3WryQJrX8tW', 'uploads/folha.png', NULL, 'Masculino', NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `usuarios`
---
-
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `senha` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+(2, 'Erick Kauan', 'kauan@gmail.com', '$2y$10$63Pa0yxtjv.XhFesUS8ztuX5VLvGmukZF9xIr9Bdn7XtlXmINa0v6', 'uploads/user.png', 'Usuario de teste tmb', 'Masculino', NULL, '1998-05-01'),
+(3, 'Joao Pedro', 'joao@gmail.com', '$2y$10$PF73dumfRFzSUepq3Bjpmu5ctRkG.pKHUDCi1jFUBM8x9vuaFKAz2', 'uploads/user.png', 'Usuario teste', 'Masculino', NULL, '1998-08-24'),
+(4, 'Thiago Viana', 'thiago@gmail.com', '$2y$10$xMaYz4sTN3mr4OQ2pxluLOQ2W.a04L6.hCqI4rpAPC3WryQJrX8tW', 'uploads/user.png', 'usuario teste', 'Masculino', NULL, NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -390,13 +405,6 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Índices de tabela `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -404,7 +412,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `followers`
 --
 ALTER TABLE `followers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `groups`
@@ -428,7 +436,7 @@ ALTER TABLE `group_members`
 -- AUTO_INCREMENT de tabela `group_messages`
 --
 ALTER TABLE `group_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT de tabela `predefined_categories`
@@ -447,12 +455,6 @@ ALTER TABLE `transactions`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT de tabela `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para tabelas despejadas
